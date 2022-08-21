@@ -1,11 +1,12 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "ignorePatterns": ["/build", "/tests", "node_modules"],
   "rules": {
@@ -18,7 +19,8 @@
     ],
     "indent": ["error", 2],
     "semi": ["error", "always"],
-    "semi-spacing": ["error", {"before": false, "after": false}],
+    "semi-spacing": ["error", { "before": false, "after": true }],
+    "space-in-parens": ["error", "never"],
     "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }]
   }
 }
